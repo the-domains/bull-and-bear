@@ -1,6 +1,6 @@
 name: 'Bull & Bear'
 favicon: null
-layout_spectrum: 0.5174271410796791
+layout_spectrum: 0.86994
 typography_spectrum: 0.93598
 title: 'Bull & Bear'
 cta:
@@ -22,8 +22,8 @@ color:
     - '#9DB4C0'
     - '#5C6B73'
     - '#253237'
-  brandStrength: 0.8408939810469747
-  lightness: 0.8900660667568445
-  saturation: 0.9312762117478997
-  rhythmicContrast: 0.9785106428898871
+  brandStrength: 0
+  lightness: 1
+  saturation: 0.9375
+  rhythmicContrast: 1
 purpose: []
