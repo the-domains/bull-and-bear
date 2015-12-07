@@ -17,8 +17,8 @@ keywords:
   - cherat
   - 5mfy16
 description: "We initiate coverage on Cherat Cement Company Limited (CHCC) with a BUY call and June'16 Target Price of PKR95/share, offering an upside of 16%. After operating close to its full capacity in the last few years, CHCC was the first player in the industry to initiate its expansion of 1.3mtpa (current capacity is of 1.0mn tpa)."
-datePublished: '2015-12-06T20:29:33.815Z'
-dateModified: '2015-12-06T20:28:52.428Z'
+datePublished: '2015-12-07T12:46:20.008Z'
+dateModified: '2015-12-06T20:29:33.815Z'
 author: []
 related: []
 app_links: []
