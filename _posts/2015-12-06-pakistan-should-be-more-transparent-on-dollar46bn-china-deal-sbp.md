@@ -22,8 +22,8 @@ inLanguage: en
 app_links: []
 isBasedOnUrl: 'http://www.dawn.com/news/1224380/pakistan-should-be-more-transparent-on-46bn-china-deal-sbp-head-says'
 title: 'Pakistan should be more transparent on $46bn China deal, SBP head says'
-datePublished: '2015-12-06T20:29:34.076Z'
-dateModified: '2015-12-06T20:25:01.231Z'
+datePublished: '2015-12-07T12:46:18.382Z'
+dateModified: '2015-12-06T20:29:34.076Z'
 sourcePath: _posts/2015-12-06-pakistan-should-be-more-transparent-on-dollar46bn-china-deal-sbp.md
 published: true
 inFeed: true
