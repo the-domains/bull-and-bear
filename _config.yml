@@ -1,20 +1,8 @@
-title: 'Bull & Bear'
-cta:
-  version: null
-  bucket: null
-  domain: null
-layout_spectrum: 0.86994
-favicon: null
 name: 'Bull & Bear'
-purpose: []
-analytics:
-  twitter: null
-  google: null
-  facebook: null
-opengraph:
-  image: null
-  type: null
-  appId: null
+favicon: null
+layout_spectrum: 0.86994
+typography_spectrum: 0.93598
+title: 'Bull & Bear'
 collections:
   - index:
       navigable: true
@@ -27,15 +15,27 @@ collections:
       number: 10
     permalink:
       path: '/:title/'
+cta:
+  domain: null
+  bucket: null
+  version: null
+analytics:
+  google: null
+  facebook: null
+  twitter: null
+opengraph:
+  image: null
+  type: null
+  appId: null
 color:
+  brandColors:
+    - '#040707'
+    - '#f36c49'
+    - '#813927'
+    - '#ffffff'
+    - '#ff0000'
   brandStrength: 1
   lightness: 1
   saturation: 0.9375
   rhythmicContrast: 1
-  brandColors:
-    - '#ABADAB'
-    - '#0C0B0D'
-    - '#396470'
-    - '#5A4321'
-    - '#D6929C'
-typography_spectrum: 0.93598
+purpose: []
