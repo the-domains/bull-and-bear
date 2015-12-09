@@ -1,7 +1,7 @@
 name: 'Bull & Bear'
 favicon: null
-layout_spectrum: 0.86994
-typography_spectrum: 0.93598
+layout_spectrum: 1
+typography_spectrum: 0.85313
 title: 'Bull & Bear'
 collections:
   - index:
