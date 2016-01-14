@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>The controversial tax GIDC - Bull & Bear</title><link href="../rss.xml" title="Bull & Bear feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.16.25"><meta name="the-grid-solution" content="2c84dc6f-24c3-4050-8df1-d63d0d9f963f"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
+<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>The controversial tax GIDC - Bull & Bear</title><link href="../rss.xml" title="Bull & Bear feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.17.3"><meta name="the-grid-solution" content="31879246-64f8-4ad8-abf0-02493292dccf"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
 @media (min-width: 15.6875em)and (max-width: 15.75em){	html{font-size:3.28125em !important}}
 @media (min-width: 15.8125em)and (max-width: 16.25em){	html{font-size:3.375em !important}}
 @media (min-width: 16.3125em)and (max-width: 16.6875em){html{font-size:3.46875em !important}}
@@ -202,6 +202,14 @@ body {
 }
 .stack {
   z-index: 1;
+  transition: transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+}
+.group,
+.aside,
+.decoration {
+  transition: transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
 }
 picture {
   display: inline-block;
@@ -250,6 +258,9 @@ a:active {
   transition: color 0.1s ease-in, background-color 0.1s ease-out;
   -webkit-transition: color 0.1s ease-in, background-color 0.1s ease-out;
 }
+a.aside {
+  display: inline-block;
+}
 html.exporting a {
   transition: none;
 }
@@ -259,11 +270,21 @@ html.exporting a {
 .media > a {
   display: inline-block;
 }
+.media iframe {
+  transition: 0.3s opacity ease-in;
+  -webkit-transition: 0.3s opacity ease-in;
+}
 h1 a,
 h2 a,
 h3 a {
   font-weight: inherit;
   letter-spacing: inherit;
+}
+a {
+  -webkit-box-decoration-break: clone;
+  -ms-box-decoration-break: clone;
+  -moz-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 .text-decoration {
   -webkit-box-decoration-break: clone;
@@ -277,36 +298,50 @@ h3 a {
   margin-left: 1.5em;
 }
 .decoration {
-  position: relative;
   pointer-events: none;
+}
+.svg {
+  position: relative;
   background-color: currentColor;
 }
-.decoration > svg {
+.svg > svg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-.decoration.connector > svg {
+.svg.connector > svg {
   width: 109%;
   height: 109%;
   margin-left: -2%;
 }
-.decoration path,
-.decoration ellipse,
-.decoration rect,
-.decoration polygon,
-.decoration circle {
+.svg path,
+.svg ellipse,
+.svg rect,
+.svg polygon,
+.svg circle {
   fill: currentColor;
 }
-.decoration mpath,
-.decoration line,
-.decoration polyline {
+.svg mpath,
+.svg line,
+.svg polyline {
   stroke: currentColor;
 }
-.svg.decoration {
+.svg {
   background-color: transparent;
+}
+.revealed .play.svg:after {
+  display: block;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  margin-top: -20px;
+  margin-left: -20px;
+  background-color: currentColor;
+  content: "";
 }
 .colors-style-aside-border .publisher,
 .colors-style-aside-border .author {
@@ -454,7 +489,8 @@ ul {
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph{font-size: 0.164rem; line-height: 0.244rem; width: 3.844rem; position: absolute; left: 0.124rem; top: 4.024rem;}
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph>p:nth-of-type(1)>span:nth-of-type(1){font-size: 0.474rem; line-height: 0.414rem; padding-top: 0.054rem; padding-right: 0.054rem;}
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph>p:nth-of-type(2){margin-top: 0.244rem;}
-#u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .media.cover { background-image: linear-gradient(rgb(79, 34, 23), rgb(243, 108, 73)); }
+#u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .media.cover { background-image: linear-gradient(rgb(79, 34, 23), rgb(243, 108, 73)); color: rgb(243, 108, 73); }
+#u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed :hover.media.cover { color: rgb(240, 245, 245); }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .title.headline { color: rgb(79, 34, 23); }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .title.headline a:hover { color: rgb(99, 46, 32); }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .text.paragraph { color: rgb(4, 6, 6); }
@@ -553,13 +589,14 @@ display: none;
 #u-2602f791-0ec6-4fed-a961-32626ede78fc >.group.mixed >.text.paragraph p:first-child .first-letter { float: left; font-weight: bold; }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc >.group.mixed { text-align: left; }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed{font-size: 0.164rem; line-height: 0.244rem; height: 8.354rem; width: 6.124rem; position: absolute; top: 0.364rem; left: 0.184rem;}
-#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover{overflow: hidden; width: 5.504rem; height: 3.674rem; position: absolute; top: 1.444rem; left: 0.314rem;}
-#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover-img#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover-img{height: 3.674rem; width: 5.504rem; position: absolute; top: 0rem; left: 0rem;}
+#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover{overflow: hidden; width: 5.504rem; height: 3.674rem; position: absolute; top: 1.444rem; left: 0.184rem;}
+#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover-img#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover-img{height: 3.674rem; width: 5.504rem; position: absolute; top: 0rem; left: 0.0149rem;}
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-headline#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-headline{font-size: 0.524rem; line-height: 0.684rem; width: 5.764rem; position: absolute; top: 0rem; left: 0.184rem;}
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph{font-size: 0.164rem; line-height: 0.244rem; width: 5.764rem; position: absolute; left: 0.184rem; top: 5.184rem;}
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph>p:nth-of-type(1)>span:nth-of-type(1){font-size: 0.474rem; line-height: 0.414rem; padding-top: 0.054rem; padding-right: 0.054rem;}
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph>p:nth-of-type(2){margin-top: 0.244rem;}
-#u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .media.cover { background-image: linear-gradient(rgb(79, 34, 23), rgb(243, 108, 73)); }
+#u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .media.cover { background-image: linear-gradient(rgb(79, 34, 23), rgb(243, 108, 73)); color: rgb(243, 108, 73); }
+#u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed :hover.media.cover { color: rgb(240, 245, 245); }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .title.headline { color: rgb(79, 34, 23); }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .title.headline a:hover { color: rgb(99, 46, 32); }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .text.paragraph { color: rgb(4, 6, 6); }
@@ -659,7 +696,8 @@ display: none;
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph{font-size: 0.164rem; line-height: 0.244rem; width: 3.844rem; position: absolute; left: 1.444rem; top: 4.184rem;}
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph>p:nth-of-type(1)>span:nth-of-type(1){font-size: 0.474rem; line-height: 0.414rem; padding-top: 0.054rem; padding-right: 0.054rem;}
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph>p:nth-of-type(2){margin-top: 0.244rem;}
-#u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .media.cover { background-image: linear-gradient(rgb(79, 34, 23), rgb(243, 108, 73)); }
+#u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .media.cover { background-image: linear-gradient(rgb(79, 34, 23), rgb(243, 108, 73)); color: rgb(243, 108, 73); }
+#u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed :hover.media.cover { color: rgb(240, 245, 245); }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .title.headline { color: rgb(79, 34, 23); }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .title.headline a:hover { color: rgb(99, 46, 32); }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .text.paragraph { color: rgb(4, 6, 6); }
@@ -754,13 +792,14 @@ display: none;
 #u-2602f791-0ec6-4fed-a961-32626ede78fc >.group.mixed >.text.paragraph p:first-child .first-letter { float: left; font-weight: bold; }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc >.group.mixed { text-align: left; }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed{font-size: 0.164rem; line-height: 0.244rem; height: 8.674rem; width: 10.084rem; position: absolute; top: 0.724rem; left: 1.444rem;}
-#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover{overflow: hidden; width: 5.504rem; height: 3.674rem; position: absolute; top: 1.604rem; left: 2.294rem;}
+#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover{overflow: hidden; width: 5.504rem; height: 3.674rem; position: absolute; top: 1.604rem; left: 2.164rem;}
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover-img#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover-img{height: 3.674rem; width: 5.504rem; position: absolute; top: 0rem; left: 0rem;}
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-headline#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-headline{font-size: 0.524rem; line-height: 0.684rem; width: 5.764rem; position: absolute; top: 0.094rem; left: 2.164rem;}
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph{font-size: 0.164rem; line-height: 0.244rem; width: 5.764rem; position: absolute; left: 2.164rem; top: 5.414rem;}
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph>p:nth-of-type(1)>span:nth-of-type(1){font-size: 0.474rem; line-height: 0.414rem; padding-top: 0.054rem; padding-right: 0.054rem;}
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph>p:nth-of-type(2){margin-top: 0.244rem;}
-#u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .media.cover { background-image: linear-gradient(rgb(79, 34, 23), rgb(243, 108, 73)); }
+#u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .media.cover { background-image: linear-gradient(rgb(79, 34, 23), rgb(243, 108, 73)); color: rgb(243, 108, 73); }
+#u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed :hover.media.cover { color: rgb(240, 245, 245); }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .title.headline { color: rgb(79, 34, 23); }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .title.headline a:hover { color: rgb(99, 46, 32); }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .text.paragraph { color: rgb(4, 6, 6); }
@@ -855,13 +894,14 @@ display: none;
 #u-2602f791-0ec6-4fed-a961-32626ede78fc >.group.mixed >.text.paragraph p:first-child .first-letter { float: left; font-weight: bold; }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc >.group.mixed { text-align: left; }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed{font-size: 0.204rem; line-height: 0.304rem; height: 9.614rem; width: 12.604rem; position: absolute; top: 0.904rem; left: 1.804rem;}
-#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover{overflow: hidden; width: 6.304rem; height: 3.674rem; position: absolute; top: 2rem; left: 3.154rem;}
+#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover{overflow: hidden; width: 6.304rem; height: 3.674rem; position: absolute; top: 2rem; left: 2.704rem;}
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover-img#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover-img{height: 4.214rem; width: 6.304rem; position: absolute; top: -0.264rem; left: 0rem;}
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-headline#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-headline{font-size: 0.654rem; line-height: 0.854rem; width: 7.204rem; position: absolute; top: 0.124rem; left: 2.704rem;}
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph{font-size: 0.204rem; line-height: 0.304rem; width: 7.204rem; position: absolute; left: 2.704rem; top: 5.854rem;}
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph>p:nth-of-type(1)>span:nth-of-type(1){font-size: 0.584rem; line-height: 0.514rem; padding-top: 0.064rem; padding-right: 0.064rem;}
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph>p:nth-of-type(2){margin-top: 0.304rem;}
-#u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .media.cover { background-image: linear-gradient(rgb(79, 34, 23), rgb(243, 108, 73)); }
+#u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .media.cover { background-image: linear-gradient(rgb(79, 34, 23), rgb(243, 108, 73)); color: rgb(243, 108, 73); }
+#u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed :hover.media.cover { color: rgb(240, 245, 245); }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .title.headline { color: rgb(79, 34, 23); }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .title.headline a:hover { color: rgb(99, 46, 32); }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .text.paragraph { color: rgb(4, 6, 6); }
@@ -956,13 +996,14 @@ display: none;
 #u-2602f791-0ec6-4fed-a961-32626ede78fc >.group.mixed >.text.paragraph p:first-child .first-letter { float: left; font-weight: bold; }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc >.group.mixed { text-align: left; }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed{font-size: 0.154rem; line-height: 0.234rem; height: 7.254rem; width: 12.604rem; position: absolute; top: 0.904rem; left: 1.804rem;}
-#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover{overflow: hidden; width: 6.304rem; height: 3.674rem; position: absolute; top: 0.944rem; left: 3.154rem;}
+#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover{overflow: hidden; width: 6.304rem; height: 3.674rem; position: absolute; top: 0.944rem; left: 2.704rem;}
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover-img#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover-img{height: 4.214rem; width: 6.304rem; position: absolute; top: -0.264rem; left: 0rem;}
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-headline#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-headline{font-size: 0.494rem; line-height: 0.644rem; width: 7.204rem; position: absolute; top: 0.124rem; left: 2.704rem;}
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph#u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph{font-size: 0.154rem; line-height: 0.234rem; width: 7.204rem; position: absolute; left: 2.704rem; top: 4.794rem;}
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph>p:nth-of-type(1)>span:nth-of-type(1){font-size: 0.444rem; line-height: 0.394rem; padding-top: 0.054rem; padding-right: 0.054rem;}
 #u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph>p:nth-of-type(2){margin-top: 0.234rem;}
-#u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .media.cover { background-image: linear-gradient(rgb(79, 34, 23), rgb(243, 108, 73)); }
+#u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .media.cover { background-image: linear-gradient(rgb(79, 34, 23), rgb(243, 108, 73)); color: rgb(243, 108, 73); }
+#u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed :hover.media.cover { color: rgb(240, 245, 245); }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .title.headline { color: rgb(79, 34, 23); }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .title.headline a:hover { color: rgb(99, 46, 32); }
 #u-2602f791-0ec6-4fed-a961-32626ede78fc#u-2602f791-0ec6-4fed-a961-32626ede78fc .group.mixed > .text.paragraph { color: rgb(4, 6, 6); }
@@ -1040,7 +1081,7 @@ display: none;
             </g>
         </g>
     </g>
-</svg></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full aspect_natural line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_large chapter stack mixed i first_chapter w_cover w_media w_headline w_title w_paragraph w_text w_decoration media_gte_narrow media_lt_half media_lt_wide media_lt_full media_landscape crop_true w_short_headline w_short_title w_long_paragraph w_long_text stack mixed" itemid="2602f791-0ec6-4fed-a961-32626ede78fc" itemtype="text" diff_index="0" index="mixed" kind="stack" score="8.75" missed="0.25" tag="article" id="u-2602f791-0ec6-4fed-a961-32626ede78fc"><div kind="group" index="mixed" class="group mixed group mixed" id="u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed"><a kind="media" index="cover" class="vfld media cover media cover" specificity="0.25" itemprop="cover" max-width="550" max-height="367" href="https://s3-us-west-2.amazonaws.com/the-grid-img/p/e9463013f28d0fad51f79db0ff367fe10da345dc.jpg" id="u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover"><picture id="u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5ed0feacdec9c85971b1a94f80dd2d21/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=367&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=550, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5ed0feacdec9c85971b1a94f80dd2d21/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=367&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=550 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5ed0feacdec9c85971b1a94f80dd2d21/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=367&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=550, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5ed0feacdec9c85971b1a94f80dd2d21/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=367&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=550 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/747caab923d6e5ca271fa72ca4744014/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=257&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=384, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5ed0feacdec9c85971b1a94f80dd2d21/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=367&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=550 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5ed0feacdec9c85971b1a94f80dd2d21/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=367&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=550, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5ed0feacdec9c85971b1a94f80dd2d21/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=367&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=550 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/747caab923d6e5ca271fa72ca4744014/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=257&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=384, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5ed0feacdec9c85971b1a94f80dd2d21/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=367&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=550 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5ed0feacdec9c85971b1a94f80dd2d21/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=367&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=550, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5ed0feacdec9c85971b1a94f80dd2d21/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=367&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=550 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader title headline" specificity="0.25" itemprop="title" id="u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-headline"><span class="text-decoration" id="u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-headline-span">The controversial <wbr class="w480 w960"></wbr>tax <wbr class="w481 w961 w1799"></wbr>GIDC</span></h1><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph"><p><span class="first-letter">T</span><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>he Gas Infrastructure Development Cess is a form of <wbr class="w480 w960"></wbr>tax charged to gas users. It has <wbr class="w481 w961"></wbr>been <wbr class="w1799"></wbr>highly <wbr class="w480 w960"></wbr>controversial and its <wbr class="w1800"></wbr>legality has been challenged in court by <wbr class="w480 w960"></wbr>several <wbr class="w481 w961"></wbr>companies <wbr class="w1799"></wbr>mainly from the fertilizer industry that <wbr class="w480 w960"></wbr>needs gas to product <wbr class="w1800"></wbr>their product. The <wbr class="w481 w961"></wbr>cess was raised <wbr class="w1799"></wbr>to <wbr class="w480 w960"></wbr>Rs100 per million British thermal unit on January 1, of gas <wbr class="w480 w960"></wbr>consumed, <wbr class="w481 w961"></wbr>going directly <wbr class="w1800"></wbr>into <wbr class="w1799"></wbr>the pockets of the federal <wbr class="w480 w960"></wbr>government, to develop the natural gas <wbr class="w481 w961"></wbr>infrastructure in the <wbr class="w480 w960 w1799"></wbr>country, including long overdue <wbr class="w1800"></wbr>Iran-Pakistan pipeline, <wbr class="w480 w481 w960 w961"></wbr>Turkmenistan-Afghanistan-<wbr class="w1799"></wbr>Pakistan-India pipeline and the <wbr class="w480 w960"></wbr>LNG Terminal projects. The <wbr class="w481 w961 w1800"></wbr>government has so far <wbr class="w480 w960"></wbr>squeezed <wbr class="w1799"></wbr>Rs131 billion out of the pockets of gas consumers <wbr class="w480 w481 w960 w961"></wbr>including Fauji Fertilizer Company <wbr class="w1800"></wbr>(#FFC), <wbr class="w1799"></wbr>Fauji Fertilizer <wbr class="w480 w960"></wbr>Bin Qasim (#FFBL), Fatima <wbr class="w481 w961"></wbr>Fertilizer (#FATIMA), Engro <wbr class="w480 w960"></wbr>Corporation <wbr class="w1799"></wbr>(#ENGRO) and Engro <wbr class="w1800"></wbr>Fertilizer (#EFERT) &#x2013; <wbr class="w480 w481 w960 w961"></wbr>also the big names in the KSE30 Index. </p><p><b><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Marred by controversy </b></p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="b7a7c6b9-a631-4c56-bc9d-eb76e12b42ac" itemtype="text" diff_index="1" index="column" kind="stack" score="2.625" missed="0.375" tag="article" id="u-b7a7c6b9-a631-4c56-bc9d-eb76e12b42ac"><div kind="group" index="column" class="group column group column" id="u-b7a7c6b9-a631-4c56-bc9d-eb76e12b42ac-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-b7a7c6b9-a631-4c56-bc9d-eb76e12b42ac-g-column-t-paragraph"><p><span class="first-letter">E</span>ver since its imposition through enactment of the &#x201C;Gas <wbr class="w480 w960"></wbr>Infrastructure Development Cess <wbr class="w481 w961 w1799"></wbr>Act, 2011&#x201D; on December <wbr class="w480 w960"></wbr>15, <wbr class="w1800"></wbr>2015, The Peshawar High Court termed the GIDC Act <wbr class="w480 w960"></wbr>as <wbr class="w481 w961 w1799"></wbr>unconstitutional and directed the authorities to refund the <wbr class="w480 w960 w1800"></wbr>amount that had been collected <wbr class="w481 w961 w1799"></wbr>previously. In addition to <wbr class="w480 w960"></wbr>this, Sindh High Court granted a stay against charging GIDC. <wbr class="w480 w960"></wbr>In <wbr class="w481 w961 w1800"></wbr>the <wbr class="w1799"></wbr>final blow, the Supreme Court of Pakistan, on August <wbr class="w480 w960"></wbr>22, 2014, passed a judgment <wbr class="w481 w961"></wbr>against an <wbr class="w1799"></wbr>appeal, upholding <wbr class="w480 w960 w1800"></wbr>Peshawar High Court&#x2019;s order beside ordering refunds and <wbr class="w480 w481 w960 w961"></wbr>adjustments of <wbr class="w1799"></wbr>the amounts collected via the cess. The <wbr class="w480 w960 w1800"></wbr>government still has options, <wbr class="w481 w961"></wbr>however, to protect the <wbr class="w1799"></wbr>cess <wbr class="w480 w960"></wbr>from banishment. It can go through proper channels to <wbr class="w480 w481 w960 w961 w1800"></wbr>incorporate the tax in the Oil and <wbr class="w1799"></wbr>Gas Regulatory Authority <wbr class="w480 w960"></wbr>Act, where it will need to <wbr class="w481 w961"></wbr>present a bill in the Lower House <wbr class="w480 w960 w1799 w1800"></wbr>(Parliament) and get due approvals from the Upper <wbr class="w481 w961"></wbr>House <wbr class="w480 w960"></wbr>(Senate). The government can also <wbr class="w1799"></wbr>appeal in the Supreme <wbr class="w480 w960"></wbr>Court, <wbr class="w1800"></wbr>arguing to repeal <wbr class="w481 w961"></wbr>the decision. What is the <wbr class="w480 w960"></wbr>government&#x2019;s next <wbr class="w1799"></wbr>move remains to be seen&#x2026; According to <wbr class="w480 w481 w960 w961"></wbr>fiscal accounts, the <wbr class="w1800"></wbr>government collected 4% of total <wbr class="w480 w960 w1799"></wbr>revenue from GIDC &#x2013; a major source <wbr class="w481 w961"></wbr>of revenue. The <wbr class="w480 w960"></wbr>International Monetary Fund has <wbr class="w1799 w1800"></wbr>linked the gas tax as one <wbr class="w480 w960"></wbr>of the key <wbr class="w481 w961"></wbr>implementations as part of Pakistan current loan <wbr class="w480 w960 w1799"></wbr>programme. </p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i last_chapter w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="a7ae6361-7c80-47b0-a18a-5c4f64c8703a" itemtype="text" diff_index="1" index="column" kind="stack" score="2.625" missed="0.375" tag="article" id="u-a7ae6361-7c80-47b0-a18a-5c4f64c8703a"><div kind="group" index="column" class="group column group column" id="u-a7ae6361-7c80-47b0-a18a-5c4f64c8703a-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-a7ae6361-7c80-47b0-a18a-5c4f64c8703a-g-column-t-paragraph"><p><b>What the future holds </b></p><p><span class="first-letter"> </span><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Since the Supreme Court&#x2019;s decision, publicly-listed <wbr class="w480 w960"></wbr>companies such as D.G Khan Cement <wbr class="w481 w961 w1799"></wbr>(#DGKC) and Maple <wbr class="w480 w960"></wbr>Leaf Cement <wbr class="w1800"></wbr>(#MLCF) have already accounted for reversals <wbr class="w480 w960"></wbr>for the <wbr class="w481 w961 w1799"></wbr>GIDC they paid over the last two years. However, <wbr class="w480 w960"></wbr>the voices in the <wbr class="w1800"></wbr>market believe in <wbr class="w481 w961 w1799"></wbr>reenactment of the GIDC <wbr class="w480 w960"></wbr>via an amendment in the Ogra Act and no refunds and <wbr class="w480 w481 w960 w961"></wbr>adjustment <wbr class="w1799"></wbr>made. All is <wbr class="w1800"></wbr>not bad news though. Even if the <wbr class="w480 w960"></wbr>matter does go in favour of the <wbr class="w481 w961"></wbr>federation, the <wbr class="w1799"></wbr>fertiliser <wbr class="w480 w960"></wbr>stocks will remain positive as no <wbr class="w1800"></wbr>reversals are made by the <wbr class="w480 w481 w960 w961"></wbr>fertiliser sector yet. </p></div></div></article><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_short_headline w_short_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-alternate-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-alternate-g-heading-t-headline"><a class="text-decoration" href="../rss.xml" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-alternate-g-heading-t-headline-a">Bull & Bear feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title w_list w_data w_short_list w_short_data layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_cover w_media w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_trailer media_gte_narrow media_lt_half media_lt_wide media_lt_full media_landscape crop_true w_short_headline w_short_title w_long_paragraph w_long_text layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-desktop-l-one-3-l-one"></div><style id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-color">body{background-color: rgba(255, 0, 0, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title w_list w_data w_short_list w_short_data layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_cover w_media w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_trailer media_gte_narrow media_lt_half media_lt_wide media_lt_full media_landscape crop_true w_short_headline w_short_title w_long_paragraph w_long_text layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-cinema-l-one-3-l-one"></div><style id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-color">body{background-color: rgba(255, 0, 0, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+</svg></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full aspect_natural line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_large chapter stack mixed i first_chapter w_cover w_media w_headline w_title w_paragraph w_text w_decoration media_gte_narrow media_lt_half media_lt_wide media_lt_full media_landscape crop_true w_short_headline w_short_title w_long_paragraph w_long_text stack mixed" itemid="2602f791-0ec6-4fed-a961-32626ede78fc" itemtype="text" diff_index="0" index="mixed" kind="stack" score="4.75" missed="0.25" tag="article" id="u-2602f791-0ec6-4fed-a961-32626ede78fc"><div kind="group" index="mixed" class="group mixed group mixed" id="u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed"><a kind="media" index="cover" class="vfld media cover media cover" specificity="0.25" itemprop="cover" max-width="550" max-height="367" href="https://s3-us-west-2.amazonaws.com/the-grid-img/p/e9463013f28d0fad51f79db0ff367fe10da345dc.jpg" id="u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover"><picture id="u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5ed0feacdec9c85971b1a94f80dd2d21/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=367&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=550, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5ed0feacdec9c85971b1a94f80dd2d21/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=367&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=550 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5ed0feacdec9c85971b1a94f80dd2d21/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=367&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=550, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5ed0feacdec9c85971b1a94f80dd2d21/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=367&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=550 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/747caab923d6e5ca271fa72ca4744014/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=257&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=384, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5ed0feacdec9c85971b1a94f80dd2d21/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=367&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=550 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5ed0feacdec9c85971b1a94f80dd2d21/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=367&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=550, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5ed0feacdec9c85971b1a94f80dd2d21/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=367&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=550 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/747caab923d6e5ca271fa72ca4744014/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=257&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=384, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5ed0feacdec9c85971b1a94f80dd2d21/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=367&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=550 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5ed0feacdec9c85971b1a94f80dd2d21/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=367&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=550, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5ed0feacdec9c85971b1a94f80dd2d21/gradientmap.jpg?color1=%23141F1F&color2=%23293D3D&color3=%23527A7A&color4=%23F68A6F&color5=%23FCD8CF&height=367&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fe9463013f28d0fad51f79db0ff367fe10da345dc.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=550 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader title headline" specificity="0.25" itemprop="title" id="u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-headline"><span class="text-decoration" id="u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-headline-span">The controversial <wbr class="w480 w960"></wbr>tax <wbr class="w481 w961 w1799"></wbr>GIDC</span></h1><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-2602f791-0ec6-4fed-a961-32626ede78fc-g-mixed-t-paragraph"><p><span class="first-letter">T</span><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>he Gas Infrastructure Development Cess is a form of <wbr class="w480 w960"></wbr>tax charged to gas users. It has <wbr class="w481 w961"></wbr>been <wbr class="w1799"></wbr>highly <wbr class="w480 w960"></wbr>controversial and its <wbr class="w1800"></wbr>legality has been challenged in court by <wbr class="w480 w960"></wbr>several <wbr class="w481 w961"></wbr>companies <wbr class="w1799"></wbr>mainly from the fertilizer industry that <wbr class="w480 w960"></wbr>needs gas to product <wbr class="w1800"></wbr>their product. The <wbr class="w481 w961"></wbr>cess was raised <wbr class="w1799"></wbr>to <wbr class="w480 w960"></wbr>Rs100 per million British thermal unit on January 1, of gas <wbr class="w480 w960"></wbr>consumed, <wbr class="w481 w961"></wbr>going directly <wbr class="w1800"></wbr>into <wbr class="w1799"></wbr>the pockets of the federal <wbr class="w480 w960"></wbr>government, to develop the natural gas <wbr class="w481 w961"></wbr>infrastructure in the <wbr class="w480 w960 w1799"></wbr>country, including long overdue <wbr class="w1800"></wbr>Iran-Pakistan pipeline, <wbr class="w480 w481 w960 w961"></wbr>Turkmenistan-Afghanistan-<wbr class="w1799"></wbr>Pakistan-India pipeline and the <wbr class="w480 w960"></wbr>LNG Terminal projects. The <wbr class="w481 w961 w1800"></wbr>government has so far <wbr class="w480 w960"></wbr>squeezed <wbr class="w1799"></wbr>Rs131 billion out of the pockets of gas consumers <wbr class="w480 w481 w960 w961"></wbr>including Fauji Fertilizer Company <wbr class="w1800"></wbr>(#FFC), <wbr class="w1799"></wbr>Fauji Fertilizer <wbr class="w480 w960"></wbr>Bin Qasim (#FFBL), Fatima <wbr class="w481 w961"></wbr>Fertilizer (#FATIMA), Engro <wbr class="w480 w960"></wbr>Corporation <wbr class="w1799"></wbr>(#ENGRO) and Engro <wbr class="w1800"></wbr>Fertilizer (#EFERT) &#x2013; <wbr class="w480 w481 w960 w961"></wbr>also the big names in the KSE30 Index. </p><p><b><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Marred by controversy </b></p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="b7a7c6b9-a631-4c56-bc9d-eb76e12b42ac" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-b7a7c6b9-a631-4c56-bc9d-eb76e12b42ac"><div kind="group" index="column" class="group column group column" id="u-b7a7c6b9-a631-4c56-bc9d-eb76e12b42ac-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-b7a7c6b9-a631-4c56-bc9d-eb76e12b42ac-g-column-t-paragraph"><p><span class="first-letter">E</span>ver since its imposition through enactment of the &#x201C;Gas <wbr class="w480 w960"></wbr>Infrastructure Development Cess <wbr class="w481 w961 w1799"></wbr>Act, 2011&#x201D; on December <wbr class="w480 w960"></wbr>15, <wbr class="w1800"></wbr>2015, The Peshawar High Court termed the GIDC Act <wbr class="w480 w960"></wbr>as <wbr class="w481 w961 w1799"></wbr>unconstitutional and directed the authorities to refund the <wbr class="w480 w960 w1800"></wbr>amount that had been collected <wbr class="w481 w961 w1799"></wbr>previously. In addition to <wbr class="w480 w960"></wbr>this, Sindh High Court granted a stay against charging GIDC. <wbr class="w480 w960"></wbr>In <wbr class="w481 w961 w1800"></wbr>the <wbr class="w1799"></wbr>final blow, the Supreme Court of Pakistan, on August <wbr class="w480 w960"></wbr>22, 2014, passed a judgment <wbr class="w481 w961"></wbr>against an <wbr class="w1799"></wbr>appeal, upholding <wbr class="w480 w960 w1800"></wbr>Peshawar High Court&#x2019;s order beside ordering refunds and <wbr class="w480 w481 w960 w961"></wbr>adjustments of <wbr class="w1799"></wbr>the amounts collected via the cess. The <wbr class="w480 w960 w1800"></wbr>government still has options, <wbr class="w481 w961"></wbr>however, to protect the <wbr class="w1799"></wbr>cess <wbr class="w480 w960"></wbr>from banishment. It can go through proper channels to <wbr class="w480 w481 w960 w961 w1800"></wbr>incorporate the tax in the Oil and <wbr class="w1799"></wbr>Gas Regulatory Authority <wbr class="w480 w960"></wbr>Act, where it will need to <wbr class="w481 w961"></wbr>present a bill in the Lower House <wbr class="w480 w960 w1799 w1800"></wbr>(Parliament) and get due approvals from the Upper <wbr class="w481 w961"></wbr>House <wbr class="w480 w960"></wbr>(Senate). The government can also <wbr class="w1799"></wbr>appeal in the Supreme <wbr class="w480 w960"></wbr>Court, <wbr class="w1800"></wbr>arguing to repeal <wbr class="w481 w961"></wbr>the decision. What is the <wbr class="w480 w960"></wbr>government&#x2019;s next <wbr class="w1799"></wbr>move remains to be seen&#x2026; According to <wbr class="w480 w481 w960 w961"></wbr>fiscal accounts, the <wbr class="w1800"></wbr>government collected 4% of total <wbr class="w480 w960 w1799"></wbr>revenue from GIDC &#x2013; a major source <wbr class="w481 w961"></wbr>of revenue. The <wbr class="w480 w960"></wbr>International Monetary Fund has <wbr class="w1799 w1800"></wbr>linked the gas tax as one <wbr class="w480 w960"></wbr>of the key <wbr class="w481 w961"></wbr>implementations as part of Pakistan current loan <wbr class="w480 w960 w1799"></wbr>programme. </p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i last_chapter w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="a7ae6361-7c80-47b0-a18a-5c4f64c8703a" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-a7ae6361-7c80-47b0-a18a-5c4f64c8703a"><div kind="group" index="column" class="group column group column" id="u-a7ae6361-7c80-47b0-a18a-5c4f64c8703a-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-a7ae6361-7c80-47b0-a18a-5c4f64c8703a-g-column-t-paragraph"><p><b>What the future holds </b></p><p><span class="first-letter"> </span><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Since the Supreme Court&#x2019;s decision, publicly-listed <wbr class="w480 w960"></wbr>companies such as D.G Khan Cement <wbr class="w481 w961 w1799"></wbr>(#DGKC) and Maple <wbr class="w480 w960"></wbr>Leaf Cement <wbr class="w1800"></wbr>(#MLCF) have already accounted for reversals <wbr class="w480 w960"></wbr>for the <wbr class="w481 w961 w1799"></wbr>GIDC they paid over the last two years. However, <wbr class="w480 w960"></wbr>the voices in the <wbr class="w1800"></wbr>market believe in <wbr class="w481 w961 w1799"></wbr>reenactment of the GIDC <wbr class="w480 w960"></wbr>via an amendment in the Ogra Act and no refunds and <wbr class="w480 w481 w960 w961"></wbr>adjustment <wbr class="w1799"></wbr>made. All is <wbr class="w1800"></wbr>not bad news though. Even if the <wbr class="w480 w960"></wbr>matter does go in favour of the <wbr class="w481 w961"></wbr>federation, the <wbr class="w1799"></wbr>fertiliser <wbr class="w480 w960"></wbr>stocks will remain positive as no <wbr class="w1800"></wbr>reversals are made by the <wbr class="w480 w481 w960 w961"></wbr>fertiliser sector yet. </p></div></div></article><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_short_headline w_short_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-alternate-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-alternate-g-heading-t-headline"><a class="text-decoration" href="../rss.xml" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-alternate-g-heading-t-headline-a">Bull & Bear feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title w_list w_data w_short_list w_short_data layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_cover w_media w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_trailer media_gte_narrow media_lt_half media_lt_wide media_lt_full media_landscape crop_true w_short_headline w_short_title w_long_paragraph w_long_text layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-desktop-l-one-3-l-one"></div><style id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-color">body{background-color: rgba(255, 0, 0, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title w_list w_data w_short_list w_short_data layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_cover w_media w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_trailer media_gte_narrow media_lt_half media_lt_wide media_lt_full media_landscape crop_true w_short_headline w_short_title w_long_paragraph w_long_text layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-cinema-l-one-3-l-one"></div><style id="u-377e0dff-0d43-48b1-99e9-cbd82f19edbe-color">body{background-color: rgba(255, 0, 0, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-20
  * http://eightmedia.github.io/hammer.js
  *
@@ -1567,9 +1608,11 @@ global.Hamburger = require('./hamburger');
 
 global.Highlighter = require('./highlighter');
 
+global.Player = require('./player');
+
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./animator":3,"./hamburger":4,"./highlighter":5,"./paginator":7,"hammerjs/hammer.min.js":1,"picturefill/dist/picturefill.min.js":2}],7:[function(require,module,exports){
+},{"./animator":3,"./hamburger":4,"./highlighter":5,"./paginator":7,"./player":8,"hammerjs/hammer.min.js":1,"picturefill/dist/picturefill.min.js":2}],7:[function(require,module,exports){
 var appendPage, mainpage, page, ref, ref1, urls;
 
 page = require('./reflow');
@@ -1670,7 +1713,192 @@ module.exports = function() {
 };
 
 
-},{"./reflow":8}],8:[function(require,module,exports){
+},{"./reflow":9}],8:[function(require,module,exports){
+var Player, Youtube, iframe, revealed, rgb2hex;
+
+iframe = null;
+
+Youtube = null;
+
+Player = function(id, src, width, height, color, bg) {
+  if (src.indexOf('youtube') > -1) {
+    src += '&color=white&theme=light&modestbranding=1';
+  }
+  src = src.replace('COLOR', color).replace('BG', bg);
+  if (location.protocol !== 'https:') {
+    src = src.replace('https:', 'http:');
+  }
+  iframe = document.createElement('iframe');
+  iframe.id = id;
+  iframe.setAttribute('allowfullscreen', '');
+  iframe.src = src;
+  iframe.width = width;
+  iframe.height = height;
+  iframe.style.width = '100%';
+  iframe.style.height = '100%';
+  iframe.style.left = 0;
+  iframe.style.right = 0;
+  iframe.style.position = 'absolute';
+  iframe.style.opacity = 0.2;
+  iframe.onload = function() {
+    return iframe.style.opacity = 1;
+  };
+  return iframe;
+};
+
+revealed = null;
+
+Player.reveal = function(iframe) {
+  var diff, i, left, len, parent, play, ref, ref1, sibling, target, top, translateX, translateY;
+  while (target = (target || iframe).parentNode) {
+    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
+      if (target.parentNode.classList.contains('group')) {
+        parent = target.parentNode;
+      } else {
+        parent = target;
+      }
+      revealed = iframe;
+      play = parent.getElementsByClassName('play')[0];
+      left = target.offsetWidth - play.offsetLeft - play.offsetWidth;
+      top = -play.offsetTop;
+      play.style.webkitTransformOrigin = 'top right';
+      play.style.webkitTransform = 'translateX(' + left + 'px) translateY(' + top + 'px) scale(0.5)';
+      target.classList.add('revealed');
+      ref1 = parent.parentNode.childNodes;
+      for (i = 0, len = ref1.length; i < len; i++) {
+        sibling = ref1[i];
+        if (sibling.nodeType === 1 && sibling !== parent) {
+          translateX = translateY = null;
+          if ((diff = sibling.offsetLeft + sibling.offsetWidth - parent.offsetLeft) > 2 && parent.offsetLeft >= sibling.offsetLeft) {
+            translateX = -diff;
+          }
+          if ((diff = target.offsetLeft + target.offsetWidth - sibling.offsetLeft) > 2 && parent.offsetLeft <= sibling.offsetLeft) {
+            if (!translateX || Math.abs(diff) < Math.abs(translateX)) {
+              translateX = diff;
+            }
+          }
+          if ((diff = sibling.offsetTop + sibling.offsetHeight - parent.offsetTop) > 2 && parent.offsetTop >= sibling.offsetTop) {
+            translateY = -diff;
+          }
+          if ((diff = target.offsetTop + target.offsetHeight - sibling.offsetTop) > 2 && parent.offsetTop <= sibling.offsetTop) {
+            if (!translateY || Math.abs(diff) < Math.abs(translateY)) {
+              translateY = diff;
+            }
+          }
+          if (Math.abs(translateX) > Math.abs(translateY)) {
+            sibling.style.webkitTransform = 'translateY(' + translateY + 'px)';
+          } else {
+            sibling.style.webkitTransform = 'translateX(' + translateX + 'px)';
+          }
+          console.log(translateX, translateY, sibling);
+        }
+      }
+    }
+  }
+};
+
+Player.hide = function(iframe) {
+  var i, len, parent, play, ref, ref1, sibling;
+  while (parent = (parent || iframe).parentNode) {
+    if ((ref = parent.classList) != null ? ref.contains('revealed') : void 0) {
+      parent.classList.remove('revealed');
+      if (parent.parentNode.classList.contains('group')) {
+        parent = parent.parentNode;
+      }
+      play = parent.getElementsByClassName('play')[0];
+      play.style.webkitTransform = '';
+      ref1 = parent.parentNode.childNodes;
+      for (i = 0, len = ref1.length; i < len; i++) {
+        sibling = ref1[i];
+        sibling.style.webkitTransform = '';
+      }
+    }
+  }
+  return revealed = null;
+};
+
+window.addEventListener('resize', function() {
+  return setTimeout(function() {
+    return requestAnimationFrame(function() {
+      if (revealed) {
+        if (revealed.offsetWidth) {
+          return Player.reveal(revealed);
+        } else {
+          return Player.stop(revealed);
+        }
+      }
+    });
+  }, 10);
+});
+
+Player.stop = function(iframe) {
+  var old;
+  old = iframe;
+  iframe.style.opacity = 0;
+  setTimeout(function() {
+    var ref;
+    return (ref = old.parentNode) != null ? ref.removeChild(old) : void 0;
+  }, 300);
+  Player.hide(iframe);
+  return iframe = null;
+};
+
+document.addEventListener('click', function(e) {
+  var bg, color, header, parent, play, ref, ref1, results, styles, target;
+  target = e.target;
+  results = [];
+  while (target) {
+    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
+      if (play = target.getElementsByClassName('play')[0]) {
+        if ((iframe != null ? iframe.parentNode : void 0) === target) {
+          Player.stop(iframe);
+        } else {
+          if (iframe) {
+            Player.stop(iframe);
+          }
+          color = bg = null;
+          header = (ref1 = target.parentNode.parentNode.getElementsByClassName('title')[0]) != null ? ref1.firstChild : void 0;
+          parent = header || play;
+          while (parent) {
+            if (parent.nodeType === 1) {
+              styles = window.getComputedStyle(parent);
+              if (styles.color.indexOf('rgba') === -1 || !styles.color.match(/,\s*0\)/)) {
+                if (color == null) {
+                  color = styles.color;
+                }
+              }
+              if (styles['background-color'].indexOf('rgba') === -1 || !styles['background-color'].match(/,\s*0\)/)) {
+                if (bg == null) {
+                  bg = styles['background-color'];
+                }
+              }
+            }
+            parent = parent.parentNode;
+          }
+          iframe = Player(play.id + '-player', play.getAttribute('data-src'), play.getAttribute('data-width'), play.getAttribute('data-height'), rgb2hex(color), rgb2hex(bg));
+          target.appendChild(iframe);
+          Player.reveal(iframe);
+        }
+        e.preventDefault();
+        break;
+      }
+    }
+    results.push(target = target.parentNode);
+  }
+  return results;
+});
+
+rgb2hex = function(rgb) {
+  rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
+  if (rgb && rgb.length === 4) {
+    return ("0" + parseInt(rgb[1], 10).toString(16)).slice(-2) + ("0" + parseInt(rgb[2], 10).toString(16)).slice(-2) + ("0" + parseInt(rgb[3], 10).toString(16)).slice(-2);
+  }
+};
+
+window.exports = window.Player = Player;
+
+
+},{}],9:[function(require,module,exports){
 module.exports = {
   reflow: function(container) {
     var counter, heights, hidden, hole, holed, holes, i, id, ids, index, j, k, l, last, layout, layouts, len, len1, len2, len3, m, mutations, name, node, ref, ref1, ref2, stack, stacks;
@@ -1935,7 +2163,7 @@ module.exports = function(callback) {
   } else {
     protocol = '';
   }
-  url = protocol + "//cdn.thegrid.io/gss/gss-document/1.2.4/gss.document.parser.js";
+  url = protocol + "//cdn.thegrid.io/gss/gss-document/1.2.8/gss.document.parser.js";
   if (location.toString().indexOf('//localhost:8080') > -1) {
     return module.exports.load(protocol + "//localhost:8080/node_modules/gss-document/dist/gss.document.parser.js", callback, function() {
       return module.exports.load(url, callback);
