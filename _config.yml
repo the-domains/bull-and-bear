@@ -19,12 +19,15 @@ analytics:
   google: null
   facebook: null
   twitter: null
-name: Bull & Bear
+logo: >-
+  https://the-grid-user-content.s3-us-west-2.amazonaws.com/75f02762-0524-4dbd-a6e9-471ef52e1308.png
+name: Bull & Bear News
 cta:
   domain: null
   bucket: null
   version: null
-favicon: null
+favicon: >-
+  https://the-grid-user-content.s3-us-west-2.amazonaws.com/f72f4f07-4555-4684-ab7c-fec4a7ddb6e5.png
 collections:
   - index:
       navigable: true
